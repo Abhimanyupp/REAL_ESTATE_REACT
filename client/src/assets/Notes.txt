@@ -1,0 +1,75 @@
+
+
+.............................................REAL-ESTATE APP...........................................................................
+
+
+
+1)create a folder-mern realestate
+    open vs code using cmd and code .
+2)Install React.js using Vite-> npm create vite@latest client
+  .Select React FrameWork
+  .Select Javascript+SWC
+  Client folder is Created with All necessary Files
+3)Open client folder from terminal - cd client
+and instal npm by -> npm i
+4)Install Tailwind-CSS using vite
+  .npm install -D tailwindcss postcss autoprefixer
+  .npx tailwindcss init -p
+  install both 
+  .Paste in Taiwin.config.js
+  ->export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+.Clear index.css and paste->
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+5)Create a folder named pages in src and create components
+  .Profile.jsx Home.jsx Signin.jsx Signout.jsx About.jsx
+6)Install React-router-dom
+by using -> npm i react-router-dom
+7)Create path in App.jsx using
+BrowserRouter,Routes,and Route
+  . Describe the path -  <BrowserRouter>
+    <Routes>
+      <Route path='/' element={<Home/>} />
+      <Route path='/sign-in' element={<Signin/>} />
+      <Route path='/sign--up' element={<Signup/>} />
+      <Route path='/about' element={<About/>} />
+      <Route path='/profile' element={<Profile/>} />
+    </Routes>
+    </BrowserRouter>
+
+  .Run the app to see the path works fine- npm run dev
+ 8) Create Folder Componenets in the src folder
+     and create components-.)Header.jsx
+     and add header tag just beow the BrowserRouter ,so the header will appear in all pages
+ 9)Header Designing-    Install React-icons - npm i react-icons
+ and import import {FaSearch} from 'react-icons/fa' the particular icon u want
+ 
+ 10)Create a folder named api for the server and create a file index.js
+ 11)install package.json in the root(real-estate) by npm init -y
+ and install express by npm i express
+
+ 12) export express in index.js file in api we should add type :"module" in the package.json in the root to avoid giving require
+ 13)next we install nodemon to avoid getting the server to restart after every change we make (npm i nodemon)
+ add "dev":"nodemon api/index.js",
+    "start": "node api/index.js"  this in package.json
+ 14)install mongoose (npm i mongoose)   
+ and install npm i dotenv and .env file in the root and paste the mongodb path
+
+
+ ...........................Create Model..................................
+
+ 1.Create a folder models and create user.model.js file inint and import mongoose and tell schema and export it 
+ 
+ ............................create api route.................
+ 
